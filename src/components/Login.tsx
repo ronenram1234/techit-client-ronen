@@ -50,7 +50,7 @@ const Login: FunctionComponent<LoginProps> = ({ setNotIsLogin }) => {
     <>
       
 
-      <div className="container w-25">
+      <div className="container d-flex justify-content-center align-item-center flex-column col-6">
       <h5 className="display-5 my-2">LOGIN</h5>
       <form onSubmit={formik.handleSubmit}>
         <div className="form-floating mb-3">

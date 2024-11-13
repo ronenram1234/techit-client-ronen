@@ -16,7 +16,7 @@ import { ToastContainer } from "react-toastify";
 import Cart from "./components/Cart";
 
 function App() {
-  const [isNotLogin, setNotIsLogin] = useState(false);
+  const [isNotLogin, setNotIsLogin] = useState(true);
 
   return (
     <div>
