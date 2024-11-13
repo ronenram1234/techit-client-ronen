@@ -8,9 +8,10 @@ import { addUser, checkUser } from "../services/usersService";
 import { Form } from "react-bootstrap";
 import { errorMsg, successMsg } from "../services/feedbackService";
 
-interface RegisterProps {}
+interface RegisterProps {
+setNotIsLogin: React.Dispatch<React.SetStateAction<boolean>>;}
 
-const Register: FunctionComponent<RegisterProps> = () => {
+const Register: FunctionComponent<RegisterProps> = ({ setNotIsLogin }) => {
   const navigate: NavigateFunction = useNavigate();
 
   const formik: FormikValues = useFormik<User>({
@@ -34,6 +35,8 @@ const Register: FunctionComponent<RegisterProps> = () => {
         addUser(values as User)
           .then(() => {
             successMsg("New user added");
+            setNotIsLogin(true);
+            localStorage.removeItem("userId");
             navigate("/");
           })
           .catch((err) => {

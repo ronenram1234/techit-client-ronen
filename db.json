@@ -111,6 +111,20 @@
       "email": "noa5@ff.com",
       "password": "1233",
       "isAdmin": false
+    },
+    {
+      "id": "812",
+      "name": "rr",
+      "email": "rr@rr.rom",
+      "password": "1234",
+      "isAdmin": true
+    },
+    {
+      "id": "433",
+      "name": "sr",
+      "email": "sr@ss.com",
+      "password": "9988",
+      "isAdmin": false
     }
   ],
   "Products": [

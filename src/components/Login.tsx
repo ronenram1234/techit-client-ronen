@@ -30,7 +30,7 @@ const Login: FunctionComponent<LoginProps> = ({ setNotIsLogin }) => {
               navigate("/home")
             
             localStorage.removeItem("userId");
-            localStorage.setItem("userId", JSON.stringify(res.data))
+            localStorage.setItem("userId", JSON.stringify(res.data[0]))
             // setUserName(values);
             // userSetItem(values);
             successMsg("Sucessful login");

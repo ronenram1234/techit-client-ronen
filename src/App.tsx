@@ -28,9 +28,9 @@ function App() {
           
           <Routes>
             <Route path="/" element={<Login setNotIsLogin={setNotIsLogin}/>} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/register" element={<Register setNotIsLogin={setNotIsLogin} />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile" element={<Profile setNotIsLogin={setNotIsLogin}/>} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
         </>
