@@ -127,168 +127,169 @@
       "isAdmin": false
     }
   ],
+
   "Products": [
     {
+      "id": "1",
       "name": "HP - 21.5 IPS LED Full HD FreeSync Monitor (HDMI, VGA) - Silver & Black",
       "price": 100,
       "category": "Monitors",
       "description": "Superior brightness, High color contrast, Best viewing angle is center",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6455/6455487ld.jpg",
-      "quantity": "10",
-      "id": "036a"
+      "quantity": "10"
     },
     {
+      "id": "2",
       "name": "LG 27GS95QE-B",
       "price": 350,
       "category": "Monitors",
       "description": "OLED gaming monitor with stunning visuals and smooth motion.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6455/6455487ld.jpg",
-      "quantity": "15",
-      "id": "1337"
+      "quantity": "15"
     },
     {
+      "id": "3",
       "name": "ASUS ROG Swift OLED PG32UCDM",
       "price": 400,
       "category": "Monitors",
       "description": "QD-OLED panel with rich colors and deep blacks.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6455/6455487ld.jpg",
-      "quantity": "8",
-      "id": "9bf7"
+      "quantity": "8"
     },
     {
+      "id": "4",
       "name": "Samsung 970 EVO Plus NVMe M.2 1TB",
       "price": 150,
       "category": "Storage Devices",
       "description": "High-speed SSD with excellent performance.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406513_sd.jpg",
-      "quantity": "20",
-      "id": "a51d"
+      "quantity": "20"
     },
     {
+      "id": "5",
       "name": "Seagate Barracuda 2TB",
       "price": 70,
       "category": "Storage Devices",
       "description": "Reliable HDD with large storage capacity.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406513_sd.jpg",
-      "quantity": "50",
-      "id": "3892"
+      "quantity": "50"
     },
     {
+      "id": "6",
       "name": "Western Digital Black SN850X 2TB",
       "price": 200,
       "category": "Storage Devices",
       "description": "High-performance NVMe SSD for gaming and creative work.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406513_sd.jpg",
-      "quantity": "35",
-      "id": "526a"
+      "quantity": "35"
     },
     {
+      "id": "7",
       "name": "Apple MacBook Pro 16-inch (M2 Pro)",
       "price": 2500,
       "category": "Laptops",
       "description": "Powerful performance with stunning display.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6582/6582841_sd.jpg",
-      "quantity": "5",
-      "id": "fe16"
+      "quantity": "5"
     },
     {
+      "id": "8",
       "name": "Dell XPS 15",
       "price": 2000,
       "category": "Laptops",
       "description": "High-resolution screen and strong performance for professionals.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6582/6582841_sd.jpg",
-      "quantity": "10",
-      "id": "c8dc"
+      "quantity": "10"
     },
     {
+      "id": "9",
       "name": "HP Spectre x360",
       "price": 1500,
       "category": "Laptops",
       "description": "Versatile 2-in-1 laptop with long battery life.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6582/6582841_sd.jpg",
-      "quantity": "8",
-      "id": "033e"
+      "quantity": "8"
     },
     {
+      "id": "10",
       "name": "Samsung QN95A Neo QLED 4K",
       "price": 1800,
       "category": "TVs",
       "description": "High brightness and vibrant colors for an immersive viewing experience.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525240_sd.jpg",
-      "quantity": "6",
-      "id": "2354"
+      "quantity": "6"
     },
     {
+      "id": "11",
       "name": "Sony X90J 4K Ultra HD",
       "price": 1200,
       "category": "TVs",
       "description": "Excellent picture quality with full-array local dimming.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525240_sd.jpg",
-      "quantity": "7",
-      "id": "34bb"
+      "quantity": "7"
     },
     {
+      "id": "12",
       "name": "LG C1 OLED 4K",
       "price": 1500,
       "category": "TVs",
       "description": "Perfect blacks and infinite contrast for a cinematic experience.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525240_sd.jpg",
-      "quantity": "4",
-      "id": "a27f"
+      "quantity": "4"
     },
     {
+      "id": "13",
       "name": "Apple Watch Series 8",
       "price": 400,
       "category": "Watches",
       "description": "Advanced health features and comprehensive fitness tracking.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6585/6585558_sd.jpg",
-      "quantity": "20",
-      "id": "5917"
+      "quantity": "20"
     },
     {
+      "id": "14",
       "name": "Rolex Submariner",
       "price": 8000,
       "category": "Watches",
       "description": "Classic design and reliable performance for diving.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6585/6585558_sd.jpg",
-      "quantity": "2",
-      "id": "2417"
+      "quantity": "2"
     },
     {
+      "id": "15",
       "name": "Garmin Fenix 7",
       "price": 700,
       "category": "Watches",
       "description": "Rugged design and extensive outdoor features for adventurers.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6585/6585558_sd.jpg",
-      "quantity": "15",
-      "id": "c82a"
+      "quantity": "15"
     },
     {
+      "id": "16",
       "name": "Canon EOS R5",
       "price": 3900,
       "category": "Cameras",
       "description": "High-resolution mirrorless camera with excellent video capabilities.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/3cab49b0-d48d-48e6-9b6a-14c9cd16142d.jpg",
-      "quantity": "5",
-      "id": "302b"
+      "quantity": "5"
     },
     {
+      "id": "17",
       "name": "Sony Alpha 7 IV",
       "price": 2500,
       "category": "Cameras",
       "description": "Full-frame mirrorless camera with outstanding autofocus.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/3cab49b0-d48d-48e6-9b6a-14c9cd16142d.jpg",
-      "quantity": "10",
-      "id": "9575"
+      "quantity": "10"
     },
     {
+      "id": "18",
       "name": "Nikon Z6 II",
       "price": 2000,
       "category": "Cameras",
       "description": "Versatile camera with dual card slots and fast shooting speeds.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/3cab49b0-d48d-48e6-9b6a-14c9cd16142d.jpg",
-      "quantity": "8",
-      "id": "3bd5"
+      "quantity": "8"
     }
   ]
 }
