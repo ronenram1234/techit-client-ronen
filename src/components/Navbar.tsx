@@ -38,7 +38,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({setNotIsLogin}) => {
                   aria-current="page"
                   to="/home"
                 >
-                  Home
+                  Products
                 </NavLink>
               </li>
               <li className="nav-item">

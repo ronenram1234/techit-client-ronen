@@ -2,7 +2,7 @@ import axios from "axios";
 import { Product } from "../interfaces/Product";
 
 
-const api: string = `${process.env.REACT_APP_API}/products`;
+const api: string = `${process.env.REACT_APP_API}/Products`;
 
 export function  checkProductById(id:string){
 
