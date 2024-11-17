@@ -1,11 +1,13 @@
 import { FunctionComponent } from "react";
 import { NavigateFunction, NavLink, useNavigate } from "react-router-dom";
+import { User } from "../interfaces/User";
 
 interface NavbarProps {
-  setNotIsLogin:React.Dispatch<React.SetStateAction<boolean>>
+  setNotIsLogin:React.Dispatch<React.SetStateAction<boolean>>,
+  userApp: User
 }
 
-const Navbar: FunctionComponent<NavbarProps> = ({setNotIsLogin}) => {
+const Navbar: FunctionComponent<NavbarProps> = ({setNotIsLogin, userApp}) => {
   const navigate: NavigateFunction = useNavigate();
   return (
     <>
@@ -73,6 +75,8 @@ const Navbar: FunctionComponent<NavbarProps> = ({setNotIsLogin}) => {
             </form>
           </div>
         </div>
+        
+      <h6 className="pt-3" style={{color: "white"}}>User: {userApp.name} {userApp.isAdmin ? (<h6>Admin</h6>) : ( <p>Not admin </p>)}</h6>
       </nav>
     </>
   );

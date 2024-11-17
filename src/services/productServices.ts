@@ -20,10 +20,16 @@ export function getAllProducts(){
     return axios.get(`${api}`)
 }
 
-export function changeProductDetails(product:Product){
-    return axios.post(`${api}?id=${product.id}`,product)
+export function changeProductDetails(id:string,product:Product){
+
+
+
+        return axios.put(`${api}/${id}`, product);
+        
+        // If that doesn't work, try these alternatives:
+
 }
 
 export function deleteProduct(id:string){
-    return axios.delete(`${api}?id=${id}`)
+    return axios.delete(`${api}/${id}`)
 }
