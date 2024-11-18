@@ -76,8 +76,13 @@ const Navbar: FunctionComponent<NavbarProps> = ({setNotIsLogin, userApp}) => {
           </div>
         </div>
         
-      <h6 className="pt-3" style={{color: "white"}}>User: {userApp.name} {userApp.isAdmin ? (<h6>Admin</h6>) : ( <p>Not admin </p>)}</h6>
+        
       </nav>
+      <p className="pt-1 namep" >
+        <img className="faceimage" src="https://i.pravatar.cc" alt="face"  />
+        {userApp.isAdmin ? 
+      `User:${userApp.name} - Admin` : 
+      `User:${userApp.name} - Not Admin`}</p>
     </>
   );
 };

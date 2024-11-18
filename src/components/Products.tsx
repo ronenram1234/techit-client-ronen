@@ -35,6 +35,7 @@ const Products: FunctionComponent<ProductsProps> = ({ userApp }) => {
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<Product>();
   const [isProductChange, setIsProductChange] = useState<boolean>(true);
+  const [sortBy, setSortBy] = useState<string>("default");
 
   useEffect(() => {
     getAllProducts()
@@ -65,11 +66,9 @@ const Products: FunctionComponent<ProductsProps> = ({ userApp }) => {
         // navigate("/products");
       }
     } catch (error) {
-      
-        console.error("Delete Error:", error);
-        errorMsg("Failed to delete product");
-      }
-    
+      console.error("Delete Error:", error);
+      errorMsg("Failed to delete product");
+    }
   };
   function addCart(id: string = "") {}
 
@@ -87,14 +86,34 @@ const Products: FunctionComponent<ProductsProps> = ({ userApp }) => {
       ) : (
         <>
           <h1 className="text-center">Products</h1>
-          <button
-            type="button"
-            className="btn btn-primary me-2"
-            onClick={() => addProduct()}
-          >
-            <FontAwesomeIcon icon={faPlus} />
-            Add Product
-          </button>
+          <div>
+            <select value={sortBy} onChange={(e)=>setSortBy(e.target.value)}>
+              <option className="item-center" value="default">
+                Default sort
+              </option>
+              <option className="item-center" value="name">
+                Sort by name
+              </option>
+              <option className="item-center" value="categort">
+                Sort by category
+              </option>
+              <option className="item-center" value="price">
+                Sort by price
+              </option>
+            </select>
+          </div>
+          {userApp.isAdmin ? (
+            <button
+              type="button"
+              className="btn btn-primary me-2"
+              onClick={() => addProduct()}
+            >
+              <FontAwesomeIcon icon={faPlus} />
+              Add Product
+            </button>
+          ) : (
+            <></>
+          )}
           <div className="container text-center">
             <div className="row">
               {allProducts.map((product) => (
