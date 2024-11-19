@@ -17,6 +17,7 @@ interface UpdateAddProps {
   handleModalUpdate: any;
 }
 
+
 const UpdateAdd: FunctionComponent<UpdateAddProps> = ({
   selectedProduct,
   modalAction,
