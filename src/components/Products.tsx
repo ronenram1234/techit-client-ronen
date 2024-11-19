@@ -51,6 +51,7 @@ const Products: FunctionComponent<ProductsProps> = ({ userApp }) => {
     setSelectedProduct(selected);
     navigate("updateproduct");
   }
+  
 
   const handleDelete = async (id: string = "") => {
     try {
