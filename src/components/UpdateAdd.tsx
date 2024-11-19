@@ -1,13 +1,13 @@
 import { FunctionComponent } from "react";
 
-import { useOutletContext } from "react-router-dom";
-import { NavigateFunction, useNavigate } from "react-router-dom";
+// import { useOutletContext } from "react-router-dom";
+// import { NavigateFunction, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { Product } from "../interfaces/Product";
 import { addNewProduct, changeProductDetails } from "../services/productServices";
 import { errorMsg, successMsg } from "../services/feedbackService";
-import axios from "axios";
+// import axios from "axios";
 
 interface UpdateAddProps {
   selectedProduct: Product;

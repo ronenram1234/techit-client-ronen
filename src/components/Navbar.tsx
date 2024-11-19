@@ -1,13 +1,16 @@
 import { FunctionComponent } from "react";
 import { NavigateFunction, NavLink, useNavigate } from "react-router-dom";
 import { User } from "../interfaces/User";
+import { Product } from "../interfaces/Product";
 
 interface NavbarProps {
   setNotIsLogin:React.Dispatch<React.SetStateAction<boolean>>,
-  userApp: User
+  userApp: User;
+  cart:Product[] ; 
+  
 }
 
-const Navbar: FunctionComponent<NavbarProps> = ({setNotIsLogin, userApp}) => {
+const Navbar: FunctionComponent<NavbarProps> = ({setNotIsLogin, userApp, cart}) => {
   const navigate: NavigateFunction = useNavigate();
   return (
     <>
@@ -38,18 +41,18 @@ const Navbar: FunctionComponent<NavbarProps> = ({setNotIsLogin, userApp}) => {
                 <NavLink
                   className="nav-link active"
                   aria-current="page"
-                  to="/home"
+                  to="/products"
                 >
                   Products
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/profile">
+              <li className="nav-item ">
+                <NavLink className="nav-link active" to="/profile">
                   Profile
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/cart">
+              <li className="nav-item ">
+                <NavLink className="nav-link active" to="/cart" state={cart}>
                   Cart
                 </NavLink>
               </li>

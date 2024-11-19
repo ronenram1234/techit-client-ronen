@@ -5,7 +5,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useSearchParams,
+  // useSearchParams,
   Navigate,
 } from "react-router-dom";
 import Login from "./components/Login";
@@ -16,8 +16,9 @@ import Navbar from "./components/Navbar";
 import { ToastContainer } from "react-toastify";
 import Cart from "./components/Cart";
 import { User } from "./interfaces/User";
-import UpdateProduct from "./components/UpdateProduct";
-import AddProduct from "./components/AddProduct";
+// import UpdateProduct from "./components/Old- UpdateProduct";
+// import AddProduct from "./components/Old-AddProduct";
+import { Product } from "./interfaces/Product";
 
 // let userApp:User={email:"", password:""}
 
@@ -26,6 +27,7 @@ function App() {
 
   const [userApp, setUserApp] = useState<User>({ email: "", password: "" });
   const userString: string | null = localStorage.getItem("userId");
+  const [cart, setCart] = useState<Product[]>([]);
 
   // check if user login exisist
   useEffect(() => {
@@ -43,7 +45,7 @@ function App() {
         <Router>
           <>
             {!isNotLogin ? (
-              <Navbar setNotIsLogin={setNotIsLogin} userApp={userApp} />
+              <Navbar setNotIsLogin={setNotIsLogin} userApp={userApp} cart={cart}  />
             ) : (
               <></>
             )}
@@ -62,9 +64,9 @@ function App() {
               ) : (
                 <Route path="/" element={<Navigate to="/products" />} />
               )}
-              <Route path="/products" element={<Products userApp={userApp} />}>
-                <Route path="updateproduct" element={<UpdateProduct />} />
-                <Route path="addproduct" element={<AddProduct />} />
+              <Route path="/products" element={<Products userApp={userApp} cart={cart} setCart={setCart}/>}>
+                {/* <Route path="updateproduct" element={<UpdateProduct />} />
+                <Route path="addproduct" element={<AddProduct />} /> */}
               </Route>
               <Route
                 path="/register"
@@ -74,7 +76,7 @@ function App() {
                 path="/profile"
                 element={<Profile setNotIsLogin={setNotIsLogin} />}
               />
-              <Route path="/cart" element={<Cart />} />
+              <Route path="/cart" element={<Cart cart={cart} />} />
             </Routes>
           </>
         </Router>

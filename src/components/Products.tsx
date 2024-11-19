@@ -9,32 +9,23 @@ import {
   faPlus,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
-// import { all } from "axios";
 import { User } from "../interfaces/User";
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   NavigateFunction,
-//   useNavigate,
-//   Outlet,
-//   useLocation,
-// } from "react-router-dom";
-// import UpdateProduct from "../components/UpdateProduct";
-// import AddProduct from "../components/AddProduct";
 import { errorMsg, successMsg } from "../services/feedbackService";
 import ModalUpdtaeAdd from "./ModalUpdtaeAdd";
-// import Modal from 'react-bootstrap/Modal';
+
 
 interface ProductsProps {
   userApp: User;
+  cart:Product[] ; 
+  setCart:React.Dispatch<React.SetStateAction<Product[]>> ;
 }
 
-const Products: FunctionComponent<ProductsProps> = ({ userApp }) => {
+const Products: FunctionComponent<ProductsProps> = ({ userApp, cart, setCart }) => {
   // const navigate: NavigateFunction = useNavigate();
   // const location = useLocation();
 
   const [allProducts, setAllProducts] = useState<Product[]>([]);
+  
   const [selectedProduct, setSelectedProduct] = useState<Product>({
     id: "",
     name: "",
@@ -73,7 +64,13 @@ const Products: FunctionComponent<ProductsProps> = ({ userApp }) => {
     }
   };
 
-  function addCart(id: string = "") {}
+  function addCart(product:Product) {
+
+    const myCart=cart
+    myCart.push(product)
+    setCart(myCart)
+
+  }
 
   // ------------------------------------------------------------------
 
@@ -183,7 +180,7 @@ const Products: FunctionComponent<ProductsProps> = ({ userApp }) => {
                       <button
                         type="button"
                         className="btn btn-primary me-2"
-                        onClick={() => addCart(userApp.id)}
+                        onClick={() => addCart(product)}
                       >
                         <FontAwesomeIcon icon={faCartShopping} />
                         Add to Cart
