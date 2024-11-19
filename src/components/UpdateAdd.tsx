@@ -1,34 +1,33 @@
-import { FunctionComponent, useEffect } from "react";
+import { FunctionComponent } from "react";
+
 import { useOutletContext } from "react-router-dom";
 import { NavigateFunction, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { Product } from "../interfaces/Product";
-import { changeProductDetails } from "../services/productServices";
+import { addNewProduct, changeProductDetails } from "../services/productServices";
 import { errorMsg, successMsg } from "../services/feedbackService";
 import axios from "axios";
 
-interface UpdateProductProps {}
+interface UpdateAddProps {
+  selectedProduct: Product;
+  modalAction: string;
+  isProductChange: boolean;
+  setIsProductChange: React.Dispatch<React.SetStateAction<boolean>>;
+  handleModalUpdate: any;
+}
 
-const UpdateProduct: FunctionComponent<UpdateProductProps> = () => {
-  const navigate: NavigateFunction = useNavigate();
-
-  // In AddProduct/UpdateProduct:
-  const { isProductChange, setIsProductChange, selectedProduct } =
-    useOutletContext<{
-      isProductChange: boolean;
-      setIsProductChange: (value: boolean) => void;
-      selectedProduct: Product;
-    }>();
-
-  //   console.log(selectedProduct)
-
-  useEffect(() => {
-    if (!selectedProduct) {
-      errorMsg("No product selected for update");
-      navigate("/products");
-    }
-  }, [selectedProduct, navigate]);
+const UpdateAdd: FunctionComponent<UpdateAddProps> = ({
+  selectedProduct,
+  modalAction,
+  isProductChange,
+  setIsProductChange,
+  handleModalUpdate,
+}) => {
+  function handleChange() {
+    setIsProductChange(!isProductChange);
+    console.log("1");
+  }
 
   const formik = useFormik<Product>({
     initialValues: {
@@ -47,39 +46,87 @@ const UpdateProduct: FunctionComponent<UpdateProductProps> = () => {
       image: yup.string().url().required(),
     }),
     onSubmit: async (values) => {
-      try {
+      if (modalAction === "add") {
+
+        addNewProduct(values)
+        .then((res) => {
+         
+            // console.log(res.data);
+         
+            setIsProductChange(!isProductChange);
+         
+            successMsg("AddnewProduct");
+            // navigate("/products");
+            handleModalUpdate()
+         
+        })
+        .catch((err) => {
+          console.log(err);
+          errorMsg(err);
+        });
 
 
-        if (!selectedProduct?.id) {
-          throw new Error("Product ID is missing");
-        }
 
-        const response = await changeProductDetails(selectedProduct.id, values);
 
-        if (response.data) {
-          setIsProductChange(!isProductChange);
-          successMsg("Product updated successfully");
-          navigate("/products");
-        }
-      } catch (error) {
-        if (axios.isAxiosError(error)) {
-          errorMsg(`Update failed: ${error.response?.data || error.message}`);
-        } else {
-          console.error("Update Error:", error);
-          errorMsg(
-            error instanceof Error ? error.message : "Failed to update product"
-          );
-        }
+      } else {
 
-        
+
+          if (!selectedProduct?.id) {
+            throw new Error("Product ID is missing");
+          }
+
+          changeProductDetails(
+            selectedProduct.id,
+            values
+          )
+          .then((res)=>{
+
+            setIsProductChange(!isProductChange);
+            successMsg("Product updated successfully");
+            handleModalUpdate()
+
+          })
+          .catch((err)=>{
+            console.log(err);
+            errorMsg(err);
+          })
+
+
+
+        // try {
+
+        //   const response = await changeProductDetails(
+        //     selectedProduct.id,
+        //     values
+        //   );
+
+        //   if (response.data) {
+        //     // setIsProductChange(!isProductChange);
+        //     setIsProductChange(!isProductChange);
+        //     successMsg("Product updated successfully");
+        //     handleModalUpdate()
+        //     // navigate("/products");
+        //   }
+        // } catch (error) {
+        //   if (axios.isAxiosError(error)) {
+        //     errorMsg(`Update failed: ${error.response?.data || error.message}`);
+        //   } else {
+        //     console.error("Update Error:", error);
+        //     errorMsg(
+        //       error instanceof Error
+        //         ? error.message
+        //         : "Failed to update product"
+        //     );
+        //   }
+        // }
       }
     },
   });
 
   return (
     <>
-      <div className="container d-flex justify-content-center align-item-center flex-column col-4">
-        <h5 className="display-5 my-2">Update Product</h5>
+      <div className="container d-flex justify-content-center align-item-center flex-column col-12">
+        {/* <h5 className="display-5 my-2">Update Product</h5> */}
         <form onSubmit={formik.handleSubmit}>
           <div className="form-floating mb-3">
             <input
@@ -167,11 +214,19 @@ const UpdateProduct: FunctionComponent<UpdateProductProps> = () => {
           </div>
 
           <button
-            className="btn btn-primary mt-3 w-100"
+            className="btn btn-primary    col-4"
             type="submit"
             disabled={!formik.dirty || !formik.isValid}
+            //   onClick={console.log("update")}
           >
-            Update Product
+            {modalAction === "add" ? "Add Product" : "Update Product"}
+          </button>
+          <button
+            className="btn btn-primary mx-3  col-4"
+            type="button"
+            onClick={() => handleModalUpdate()}
+          >
+            Close
           </button>
         </form>
       </div>
@@ -179,4 +234,4 @@ const UpdateProduct: FunctionComponent<UpdateProductProps> = () => {
   );
 };
 
-export default UpdateProduct;
+export default UpdateAdd;
