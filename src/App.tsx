@@ -77,6 +77,7 @@ function App() {
                 element={<Profile setNotIsLogin={setNotIsLogin} />}
               />
               <Route path="/cart" element={<Cart cart={cart} />} />
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
           </>
         </Router>

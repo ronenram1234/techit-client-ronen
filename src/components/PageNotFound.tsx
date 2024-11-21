@@ -1,11 +1,9 @@
 import { FunctionComponent } from "react";
 
-interface PageNotFoundProps {
-    
-}
- 
+interface PageNotFoundProps {}
+
 const PageNotFound: FunctionComponent<PageNotFoundProps> = () => {
-    return ( <>PageNotFound</> );
-}
- 
+  return <>404 - PAGE NOT FOUND</>;
+};
+
 export default PageNotFound;
