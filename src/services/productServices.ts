@@ -9,8 +9,13 @@ export function  checkProductById(id:string){
     return axios.get(`${api}?id=${id}`)
 }
 
+export function  getProductById(id:string){
+
+    return axios.get(`${api}?id=${id}`)
+}
+
 export function addNewProduct(product:Product){
-    product.id=String(Math.floor(Math.random()*1000))
+    // product.id=String(Math.floor(Math.random()*1000))
     return axios.post(`${api}`,product)
 
 }

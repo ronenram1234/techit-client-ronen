@@ -134,7 +134,8 @@
       "category": "Monitors",
       "description": "OLED gaming monitor with stunning visuals and smooth motion.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6455/6455487ld.jpg",
-      "id": "2"
+      "id": "2",
+      "isAvailable": true
     },
     {
       "id": "3",
@@ -143,7 +144,8 @@
       "category": "Monitors",
       "description": "QD-OLED panel with rich colors and deep blacks.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6455/6455487ld.jpg",
-      "quantity": "8"
+      "quantity": "8",
+      "isAvailable": true
     },
     {
       "id": "4",
@@ -152,7 +154,8 @@
       "category": "Storage Devices",
       "description": "High-speed SSD with excellent performance.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406513_sd.jpg",
-      "quantity": "20"
+      "quantity": "20",
+      "isAvailable": true
     },
     {
       "name": "Seagate Barracuda 2TB",
@@ -160,7 +163,8 @@
       "category": "Storage Devices",
       "description": "Reliable HDD with large storage capacity.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406513_sd.jpg",
-      "id": "5"
+      "id": "5",
+      "isAvailable": true
     },
     {
       "id": "6",
@@ -169,7 +173,8 @@
       "category": "Storage Devices",
       "description": "High-performance NVMe SSD for gaming and creative work.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6406/6406513_sd.jpg",
-      "quantity": "35"
+      "quantity": "35",
+      "isAvailable": true
     },
     {
       "id": "7",
@@ -178,7 +183,8 @@
       "category": "Laptops",
       "description": "Powerful performance with stunning display.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6582/6582841_sd.jpg",
-      "quantity": "5"
+      "quantity": "5",
+      "isAvailable": true
     },
     {
       "id": "8",
@@ -187,7 +193,8 @@
       "category": "Laptops",
       "description": "High-resolution screen and strong performance for professionals.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6582/6582841_sd.jpg",
-      "quantity": "10"
+      "quantity": "10",
+      "isAvailable": true
     },
     {
       "id": "9",
@@ -196,7 +203,8 @@
       "category": "Laptops",
       "description": "Versatile 2-in-1 laptop with long battery life.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6582/6582841_sd.jpg",
-      "quantity": "8"
+      "quantity": "8",
+      "isAvailable": true
     },
     {
       "id": "10",
@@ -205,7 +213,8 @@
       "category": "TVs",
       "description": "High brightness and vibrant colors for an immersive viewing experience.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525240_sd.jpg",
-      "quantity": "6"
+      "quantity": "6",
+      "isAvailable": true
     },
     {
       "id": "11",
@@ -214,7 +223,8 @@
       "category": "TVs",
       "description": "Excellent picture quality with full-array local dimming.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525240_sd.jpg",
-      "quantity": "7"
+      "quantity": "7",
+      "isAvailable": true
     },
     {
       "id": "12",
@@ -223,7 +233,8 @@
       "category": "TVs",
       "description": "Perfect blacks and infinite contrast for a cinematic experience.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525240_sd.jpg",
-      "quantity": "4"
+      "quantity": "4",
+      "isAvailable": true
     },
     {
       "id": "13",
@@ -232,7 +243,8 @@
       "category": "Watches",
       "description": "Advanced health features and comprehensive fitness tracking.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6585/6585558_sd.jpg",
-      "quantity": "20"
+      "quantity": "20",
+      "isAvailable": true
     },
     {
       "id": "14",
@@ -241,7 +253,8 @@
       "category": "Watches",
       "description": "Classic design and reliable performance for diving.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6585/6585558_sd.jpg",
-      "quantity": "2"
+      "quantity": "2",
+      "isAvailable": true
     },
     {
       "id": "15",
@@ -250,7 +263,8 @@
       "category": "Watches",
       "description": "Rugged design and extensive outdoor features for adventurers.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6585/6585558_sd.jpg",
-      "quantity": "15"
+      "quantity": "15",
+      "isAvailable": true
     },
     {
       "id": "16",
@@ -259,7 +273,8 @@
       "category": "Cameras",
       "description": "High-resolution mirrorless camera with excellent video capabilities.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/3cab49b0-d48d-48e6-9b6a-14c9cd16142d.jpg",
-      "quantity": "5"
+      "quantity": "5",
+      "isAvailable": true
     },
     {
       "id": "17",
@@ -268,7 +283,8 @@
       "category": "Cameras",
       "description": "Full-frame mirrorless camera with outstanding autofocus.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/3cab49b0-d48d-48e6-9b6a-14c9cd16142d.jpg",
-      "quantity": "10"
+      "quantity": "10",
+      "isAvailable": true
     },
     {
       "id": "18",
@@ -277,7 +293,8 @@
       "category": "Cameras",
       "description": "Versatile camera with dual card slots and fast shooting speeds.",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/3cab49b0-d48d-48e6-9b6a-14c9cd16142d.jpg",
-      "quantity": "8"
+      "quantity": "8",
+      "isAvailable": true
     },
     {
       "name": "ronen ram",
@@ -285,7 +302,132 @@
       "category": "human",
       "description": "test",
       "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6525/6525240_sd.jpg",
-      "id": "580"
+      "id": "580",
+      "isAvailable": true
+    }
+  ],
+  "Carts": [
+    {
+      "id": "100",
+      "userId": "1",
+      "products": [
+        "6",
+        "10",
+        "15",
+        "17",
+        "13",
+        "13",
+        "17",
+        "580",
+        "13",
+        "3",
+        "6",
+        "7",
+        "6"
+      ],
+      "active": true
+    },
+    {
+      "id": "101",
+      "userId": "2",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "102",
+      "userId": "3",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "103",
+      "userId": "4",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "104",
+      "userId": "5",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "105",
+      "userId": "6",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "106",
+      "userId": "7",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "107",
+      "userId": "8",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "108",
+      "userId": "9",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "109",
+      "userId": "10",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "110",
+      "userId": "11",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "111",
+      "userId": "12",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "112",
+      "userId": "872",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "113",
+      "userId": "521",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "114",
+      "userId": "785",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "115",
+      "userId": "919",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "116",
+      "userId": "812",
+      "products": [],
+      "active": true
+    },
+    {
+      "id": "117",
+      "userId": "433",
+      "products": [],
+      "active": true
     }
   ]
 }

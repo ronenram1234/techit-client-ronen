@@ -8,6 +8,6 @@ export function checkUser(user: User): Promise<any> {
 }
 
 export function addUser(user: User): Promise<any> {
-  user.id = String(Math.floor(Math.random() * 1000));
+  // user.id = String(Math.floor(Math.random() * 1000));
   return axios.post(api, user);
 }

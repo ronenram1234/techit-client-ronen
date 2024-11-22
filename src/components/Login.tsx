@@ -3,12 +3,7 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { User } from "../interfaces/User";
 import { checkUser } from "../services/usersService";
-import {
-  Link,
-  Navigate,
-  NavigateFunction,
-  useNavigate,
-} from "react-router-dom";
+import { Link, NavigateFunction, useNavigate } from "react-router-dom";
 import { errorMsg, successMsg } from "../services/feedbackService";
 
 interface LoginProps {

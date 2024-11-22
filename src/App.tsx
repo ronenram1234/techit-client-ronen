@@ -19,6 +19,7 @@ import { User } from "./interfaces/User";
 // import UpdateProduct from "./components/Old- UpdateProduct";
 // import AddProduct from "./components/Old-AddProduct";
 import { Product } from "./interfaces/Product";
+import PageNotFound from "./components/PageNotFound";
 
 // let userApp:User={email:"", password:""}
 
@@ -36,7 +37,12 @@ function App() {
       const obj: User = JSON.parse(userString);
       setUserApp(obj);
     }
-  }, []);
+  }, [userString]);
+
+  useEffect(()=>{
+console.log(cart)
+
+  },[cart])
 
   return (
     <div>
@@ -65,8 +71,7 @@ function App() {
                 <Route path="/" element={<Navigate to="/products" />} />
               )}
               <Route path="/products" element={<Products userApp={userApp} cart={cart} setCart={setCart}/>}>
-                {/* <Route path="updateproduct" element={<UpdateProduct />} />
-                <Route path="addproduct" element={<AddProduct />} /> */}
+             
               </Route>
               <Route
                 path="/register"

@@ -57,11 +57,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({setNotIsLogin, userApp, cart}) 
                 </NavLink>
               </li>
 
-              {/* <li className="nav-item">
-                <NavLink className="nav-link" to="/register">
-                  Register
-                </NavLink>
-              </li> */}
+         
             </ul>
             <form className="d-flex" role="search">
               <button

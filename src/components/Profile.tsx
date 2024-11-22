@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import { User } from "../interfaces/User";
-import { errorMsg, successMsg } from "../services/feedbackService";
+import { errorMsg } from "../services/feedbackService";
 import { NavigateFunction, useNavigate } from "react-router-dom";
 
 interface ProfileProps {

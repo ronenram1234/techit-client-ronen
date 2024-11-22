@@ -1,13 +1,11 @@
 import { FunctionComponent } from "react";
 
-// import { useOutletContext } from "react-router-dom";
-// import { NavigateFunction, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { Product } from "../interfaces/Product";
 import { addNewProduct, changeProductDetails } from "../services/productServices";
 import { errorMsg, successMsg } from "../services/feedbackService";
-// import axios from "axios";
+
 
 interface UpdateAddProps {
   selectedProduct: Product;
@@ -25,10 +23,10 @@ const UpdateAdd: FunctionComponent<UpdateAddProps> = ({
   setIsProductChange,
   handleModalUpdate,
 }) => {
-  function handleChange() {
-    setIsProductChange(!isProductChange);
-    console.log("1");
-  }
+  // function handleChange() {
+  //   setIsProductChange(!isProductChange);
+  //   console.log("1");
+  // }
 
   const formik = useFormik<Product>({
     initialValues: {
@@ -94,32 +92,7 @@ const UpdateAdd: FunctionComponent<UpdateAddProps> = ({
 
 
 
-        // try {
-
-        //   const response = await changeProductDetails(
-        //     selectedProduct.id,
-        //     values
-        //   );
-
-        //   if (response.data) {
-        //     // setIsProductChange(!isProductChange);
-        //     setIsProductChange(!isProductChange);
-        //     successMsg("Product updated successfully");
-        //     handleModalUpdate()
-        //     // navigate("/products");
-        //   }
-        // } catch (error) {
-        //   if (axios.isAxiosError(error)) {
-        //     errorMsg(`Update failed: ${error.response?.data || error.message}`);
-        //   } else {
-        //     console.error("Update Error:", error);
-        //     errorMsg(
-        //       error instanceof Error
-        //         ? error.message
-        //         : "Failed to update product"
-        //     );
-        //   }
-        // }
+        
       }
     },
   });

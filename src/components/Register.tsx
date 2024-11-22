@@ -31,7 +31,7 @@ const Register: FunctionComponent<RegisterProps> = ({ setNotIsLogin }) => {
 
     onSubmit: async (values) => {
       const userExist = await checkUser(values);
-      if (userExist.data.length==0) {
+      if (userExist.data.length===0) {
         addUser(values as User)
           .then(() => {
             successMsg("New user added");
@@ -119,6 +119,4 @@ const Register: FunctionComponent<RegisterProps> = ({ setNotIsLogin }) => {
 };
 
 export default Register;
-function sucessMsg(arg0: string) {
-  throw new Error("Function not implemented.");
-}
+
