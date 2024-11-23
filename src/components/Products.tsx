@@ -1,12 +1,16 @@
-import { FunctionComponent, useEffect, useState } from "react";
+import {  FunctionComponent, useEffect, useState } from "react";
 import { getAllProducts, getProductById } from "../services/productServices";
 import { Product } from "../interfaces/Product";
 import { User } from "../interfaces/User";
 import ModalUpdtaeAdd from "./ModalUpdtaeAdd";
 import ButtonAddProduct from "./ButtonAddProduct";
-import ProdectCard from "./ProductCard";
-import { addProdectIdToCart } from "../services/cartService";
+
+import { addProductIdToCart } from "../services/cartService";
 import ProductCard from "./ProductCard";
+
+// const SharedStateContext = createContext();
+
+
 
 interface ProductsProps {
   userApp: User;
@@ -33,6 +37,7 @@ const Products: FunctionComponent<ProductsProps> = ({
     image: "",
   });
   const [isProductChange, setIsProductChange] = useState<boolean>(true);
+  // const [shouldCartUpdate, setShouldCartUpdate] = useState<boolean>(true);
 
   const [modalShow, setModalShow] = useState(false);
   const [modalAction, setModalAction] = useState("add");
@@ -43,27 +48,32 @@ const Products: FunctionComponent<ProductsProps> = ({
       .catch((err) => console.log(err));
   }, [isProductChange]);
 
+  // useEffect(() => {
+  //   if (shouldCartUpdate === true) {
+  //     setShouldCartUpdate(false);
+  //   }
+  // }, [shouldCartUpdate]);
+
   function addCart(product: Product) {
     // const myCart = cart;
     const tempCart: Product[] = [];
 
     product.id &&
       userApp.id &&
-      addProdectIdToCart(product.id, userApp.id)
+      addProductIdToCart(product.id, userApp.id)
         .then((res) => {
           res.data.products.map((key: string) => {
             getProductById(key)
               .then((res) => {
                 tempCart.push(res.data[0]);
-               
+
                 setCart(tempCart);
+                // setShouldCartUpdate(true)
               })
               .catch((err) => console.log(err));
           });
         })
         .catch((err) => console.log(err));
-
-  
   }
 
   function addProduct() {
@@ -82,36 +92,39 @@ const Products: FunctionComponent<ProductsProps> = ({
 
   return (
     <>
-      <h1 className="text-center">Products</h1>
+      
+        <h1 className="text-center">Products</h1>
 
-      {userApp.isAdmin ? <ButtonAddProduct addProduct={addProduct} /> : <></>}
-      <div className="container text-center">
-        <div className="row">
-          {allProducts.map((product) => (
-            <ProductCard
-              product={product}
-              addCart={addCart}
-              isAdmin={userApp.isAdmin}
-              isProductChange={isProductChange}
-              setIsProductChange={setIsProductChange}
-              allProducts={allProducts}
-              setSelectedProduct={setSelectedProduct}
-              setModalAction={setModalAction}
-              setModalShow={setModalShow}
-            />
-          ))}
+        {userApp.isAdmin ? <ButtonAddProduct addProduct={addProduct} /> : <></>}
+        <div className="container text-center">
+          <div className="row">
+            {allProducts.map((product) => (
+              <ProductCard
+                product={product}
+                addCart={addCart}
+                isAdmin={userApp.isAdmin}
+                isProductChange={isProductChange}
+                setIsProductChange={setIsProductChange}
+                allProducts={allProducts}
+                setSelectedProduct={setSelectedProduct}
+                setModalAction={setModalAction}
+                setModalShow={setModalShow}
+                
+              />
+            ))}
+          </div>
         </div>
-      </div>
 
-      <ModalUpdtaeAdd
-        show={modalShow}
-        // setModalShow={setModalShow}
-        onHide={() => setModalShow(false)}
-        modalAction={modalAction}
-        selectedProduct={selectedProduct}
-        isProductChange={isProductChange}
-        setIsProductChange={setIsProductChange}
-      />
+        <ModalUpdtaeAdd
+          show={modalShow}
+          // setModalShow={setModalShow}
+          onHide={() => setModalShow(false)}
+          modalAction={modalAction}
+          selectedProduct={selectedProduct}
+          isProductChange={isProductChange}
+          setIsProductChange={setIsProductChange}
+        />
+      
     </>
   );
 };

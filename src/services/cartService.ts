@@ -7,7 +7,7 @@ export function getCartbyUserId(id: string): Promise<any> {
   return axios.get(`${api}?userId=${id}`);
 }
 
-export async function addProdectIdToCart(
+export async function addProductIdToCart(
   productId: string,
   userId: string
 ): Promise<any> {
@@ -20,7 +20,7 @@ export async function addProdectIdToCart(
     const cart: Cart = res.data[0];
     cart.products.push(productId);
 
-    console.log(`${api}?userId=${userId}`);
+    // console.log(`${api}?userId=${userId}`);
 
     return axios.patch(`${api}/${cart.id}`, cart);
   } catch (err) {

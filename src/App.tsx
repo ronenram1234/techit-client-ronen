@@ -39,10 +39,9 @@ function App() {
     }
   }, [userString]);
 
-  useEffect(()=>{
-console.log(cart)
-
-  },[cart])
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
 
   return (
     <div>
@@ -51,7 +50,11 @@ console.log(cart)
         <Router>
           <>
             {!isNotLogin ? (
-              <Navbar setNotIsLogin={setNotIsLogin} userApp={userApp} cart={cart}  />
+              <Navbar
+                setNotIsLogin={setNotIsLogin}
+                userApp={userApp}
+                cart={cart}
+              />
             ) : (
               <></>
             )}
@@ -70,9 +73,12 @@ console.log(cart)
               ) : (
                 <Route path="/" element={<Navigate to="/products" />} />
               )}
-              <Route path="/products" element={<Products userApp={userApp} cart={cart} setCart={setCart}/>}>
-             
-              </Route>
+              <Route
+                path="/products"
+                element={
+                  <Products userApp={userApp} cart={cart} setCart={setCart} />
+                }
+              ></Route>
               <Route
                 path="/register"
                 element={<Register setNotIsLogin={setNotIsLogin} />}

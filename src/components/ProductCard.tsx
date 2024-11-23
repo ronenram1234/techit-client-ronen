@@ -30,6 +30,7 @@ const ProdectCard: FunctionComponent<ProductCardProps> = ({
   setSelectedProduct,
   setModalAction,
   setModalShow,
+  
 }) => {
   const handleDelete = async (id: string = "") => {
     try {

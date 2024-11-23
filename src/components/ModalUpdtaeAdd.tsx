@@ -24,7 +24,7 @@ const ModalUpdtaeAdd: FunctionComponent<ModalUpdtaeAddProps> = ({
 //   console.log(show);
 //   console.log(onHide);
 //   console.log("modal components");
-console.log(selectedProduct)
+// console.log(selectedProduct)
 
 function handleModalUpdate(){
     // setModalShow(false)
