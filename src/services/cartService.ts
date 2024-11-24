@@ -15,7 +15,7 @@ export async function addProductIdToCart(
     const res = await getCartbyUserId(userId);
     
 
-    if (res.data.length > 1) throw "Multiple open carts";
+    if (res.data.length > 1) throw new Error("Multiple open carts");
 
     const cart: Cart = res.data[0];
     cart.products.push(productId);
